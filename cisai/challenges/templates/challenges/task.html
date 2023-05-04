@@ -34,22 +34,22 @@ oh god
                     <div>
                         <a href="https://vighneshhm.github.io/Crashing-Into-You-CTF/" target="_blank"><input type="button" class="btn-primary" value="Play"></a>
                     </div>
-                    <form action="/challenges/submit/" method="post">
+                    {% comment %} <form action="/challenges/submit/" method="post"> {% endcomment %}
                     <div class="input-group mb-3 space">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">Enter the Flag</span>
                         </div>
                         <input type="text" class="form-control modal-flag" placeholder="flag{t3st_f1ag}"
-                            aria-label="flag" aria-describedby="basic-addon1" name = "flag">
+                            aria-label="flag" aria-describedby="basic-addon1" id="inputChallenge6" name = "flag">
                         <input type="hidden" name="task" value="6">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" id="submitChallenge6" class="btn btn-primary">Submit</button>
                 </div>
                 {% csrf_token %}
-                </form>
+                {% comment %} </form> {% endcomment %}
             </div>
         </div>
     </div>
@@ -82,7 +82,7 @@ there's so many r
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="/challenges/submit/" method="post">
+                {% comment %} <form action="/challenges/submit/" method="post"> {% endcomment %}
                 <div class="modal-body">
 dont' know which is which 
                     <div class="input-group mb-3 space">
@@ -90,16 +90,16 @@ dont' know which is which
                             <span class="input-group-text" id="basic-addon1">Enter the Flag</span>
                         </div>
                         <input type="text" class="form-control modal-flag" placeholder="flag{t3st_f1ag}"
-                            aria-label="flag" aria-describedby="basic-addon1" name="flag">
+                            aria-label="flag" aria-describedby="basic-addon1" id="inputChallenge1" name="flag">
                         <input type="hidden" name="task" value="1">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" id="submitChallenge1" class="btn btn-primary">Submit</button>
                 </div>
                 {% csrf_token %}
-                </form>
+                {% comment %} </form> {% endcomment %}
             </div>
         </div>
     </div>
@@ -112,22 +112,23 @@ dont' know which is which
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-random bullshit go <form action="/challenges/submit/" method="post">
+random bullshit go 
+{% comment %} <form action="/challenges/submit/" method="post"> {% endcomment %}
                     <div class="input-group mb-3 space">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">Enter the Flag</span>
                         </div>
                         <input type="text" class="form-control modal-flag" placeholder="flag{t3st_f1ag}"
-                            aria-label="flag" aria-describedby="basic-addon1"
+                            aria-label="flag" id="inputChallenge2" aria-describedby="basic-addon1"
                             name="flag">
                             <input type="hidden" name="task" value="2">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" id="submitChallenge2" class="btn btn-primary">Submit</button>
                     </div>
                     {% csrf_token %}
-                    </form>
+                    {% comment %} </form> {% endcomment %}
                 </div>
             </div>
         </div>
@@ -141,7 +142,7 @@ random bullshit go <form action="/challenges/submit/" method="post">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="/challenges/submit/" method="post">
+                {% comment %} <form action="/challenges/submit/" method="post"> {% endcomment %}
                 <div class="modal-body">
 really bro ? 
                     <div class="input-group mb-3 space">
@@ -149,16 +150,16 @@ really bro ?
                             <span class="input-group-text" id="basic-addon1">Enter the Flag</span>
                         </div>
                         <input type="text" class="form-control modal-flag" placeholder="flag{t3st_f1ag}"
-                            aria-label="flag" aria-describedby="basic-addon1">
+                            aria-label="flag" id="inputChallenge3" aria-describedby="basic-addon1">
                         <input type="hidden" value="3" name="task">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" id="submitChallenge3" class="btn btn-primary">Submit</button>
                 </div>
                 {% csrf_token %}
-                </form>
+                {% comment %} </form> {% endcomment %}
             </div>
         </div>
     </div>
@@ -171,7 +172,7 @@ really bro ?
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="/challenges/submit/" method="post">
+                {% comment %} <form action="/challenges/submit/" method="post"> {% endcomment %}
                 <div class="modal-body">
  just kill me already 
                     <div class="input-group mb-3 space">
@@ -179,16 +180,16 @@ really bro ?
                             <span class="input-group-text" id="basic-addon1">Enter the Flag</span>
                         </div>
                         <input type="text" class="form-control modal-flag" placeholder="flag{t3st_f1ag}"
-                            aria-label="flag" aria-describedby="basic-addon1">
+                            aria-label="flag" id="inputChallenge4" aria-describedby="basic-addon1">
                         <input type="hidden" name="flag" value="4">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" id="submitChallenge4" class="btn btn-primary">Submit</button>
                 </div>
                 {% csrf_token %}
-                </form>
+                {% comment %} </form> {% endcomment %}
             </div>
         </div>
     </div>
@@ -201,7 +202,7 @@ really bro ?
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="/challenges/submit" method="post">
+                {% comment %} <form action="/challenges/submit" method="post"> {% endcomment %}
                 <div class="modal-body">
 when will my misery end ? 
                     <div class="input-group mb-3 space">
@@ -209,16 +210,16 @@ when will my misery end ?
                             <span class="input-group-text" id="basic-addon1">Enter the Flag</span>
                         </div>
                         <input type="text" class="form-control modal-flag" placeholder="flag{t3st_f1ag}"
-                            aria-label="flag" aria-describedby="basic-addon1">
+                            aria-label="flag" id="inputChallenge5" aria-describedby="basic-addon1">
                         <input type="hidden" name="flag" value="5">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" id="submitChallenge5" class="btn btn-primary">Submit</button>
                 </div>
                 {% csrf_token %}
-                </form>
+                {% comment %} </form> {% endcomment %}
             </div>
         </div>
     </div>
@@ -438,16 +439,109 @@ when will my misery end ?
             </div>
         </div>
     </main>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script>
+        const submitChallenge1=$("#submitChallenge1");
+        const submitChallenge2=$("#submitChallenge2");
+        const submitChallenge3=$("#submitChallenge3");
+        const submitChallenge4=$("#submitChallenge4");
+        const submitChallenge5=$("#submitChallenge5");
+        const submitChallenge6=$("#submitChallenge6");
+        const inputChallenge1=$("#inputChallenge1");
+        const inputChallenge2=$("#inputChallenge2");
+        const inputChallenge3=$("#inputChallenge3");
+        const inputChallenge4=$("#inputChallenge4");
+        const inputChallenge5=$("#inputChallenge5");
+        const inputChallenge6=$("#inputChallenge6");
+
+        $(document).ready(function(){
+            let csrftoken = $("[name=csrfmiddlewaretoken]").val();
+            submitChallenge1.on("click",function(){
+                $.ajax({
+                    url:"/challenges/submit/",
+                    type:"POST",
+                    data:{flag:inputChallenge1.val(),task:"1",},
+                    beforeSend: function(xhr, settings) {
+                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                      },
+                    success:function(response){
+                        console.log("Hello");
+                    }
+                })
+            })
+            submitChallenge2.on("click",function(){
+                $.ajax({
+                    url:"/challenges/submit/",
+                    type:"POST",
+                    data:{flag:inputChallenge2.val(),task:"2",},
+                    beforeSend: function(xhr, settings) {
+                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                      },
+                    success:function(response){
+                        console.log("Hello");
+                    }
+                })
+            })
+            submitChallenge3.on("click",function(){
+                $.ajax({
+                    url:"/challenges/submit/",
+                    type:"POST",
+                    data:{value:inputChallenge3.val(),task:"3"},
+                    beforeSend: function(xhr, settings) {
+                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                      },
+                    success:function(response){
+                        console.log("Hello");
+                    }
+                })
+            })
+            submitChallenge4.on("click",function(){
+                $.ajax({
+                    url:"/challenges/submit/",
+                    type:"POST",
+                    data:{value:inputChallenge4.val(),task:"4"},
+                    beforeSend: function(xhr, settings) {
+                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                      },
+                    success:function(response){
+                        console.log("Hello");
+                    }
+                })
+            })
+            submitChallenge5.on("click",function(){
+                $.ajax({
+                    url:"/challenges/submit/",
+                    type:"POST",
+                    data:{value:inputChallenge5.val(),task:"5"},
+                    beforeSend: function(xhr, settings) {
+                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                      },
+                    success:function(response){
+                        console.log
+                    }
+                })
+            })
+            submitChallenge6.on("click",function(){
+                $.ajax({
+                    url:"/challenges/submit/`",
+                    type:"POST",
+                    data:{value:inputChallenge6.val(),task:"6"},
+                    beforeSend: function(xhr, settings) {
+                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                      },
+                    success:function(response){
+                        console.log("Hello");
+                    }
+                })
+            })
+        });
+    </script>
 </body>
 
 </html>
