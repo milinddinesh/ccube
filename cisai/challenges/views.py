@@ -58,12 +58,12 @@ def submit(request):
                             user.task1 = 5
                             user.save()
                             response_data = {'success': True, 'message': "That's Correct!"}
-                            return response_data
+                            return JsonResponse(response_data)
                         else :
                             user.task1 += 1
                             user.save()
                             response_data = {'success': False, 'message': "Wrong Answer!"}
-                            return response_data
+                            return JsonResponse(response_data)
                     else : return HttpResponse("You have reached your submission limit")
                 elif task_id == "2":
                     if user.task2 <5 :
@@ -71,7 +71,7 @@ def submit(request):
                             user.task2 = 5
                             user.save()
                             response_data = {'success': True, 'message': "That's Correct!"}
-                            return response_data
+                            return JsonResponse(response_data)
                         else :
                             user.task2 += 1
                             user.save()
@@ -84,12 +84,12 @@ def submit(request):
                             user.task3 = 5
                             user.save()
                             response_data = {'success': True, 'message': "That's Correct!"}
-                            return response_data
+                            return JsonResponse(response_data)
                         else :
                             user.task3 += 1
                             user.save()
                             response_data = {'success': False, 'message': "Wrong Answer!"}
-                            return response_data
+                            return JsonResponse(response_data)
                     else : return HttpResponse("You have reached your submission limit")
                 elif task_id == "4":
                     if user.task4 <5 :
@@ -97,12 +97,12 @@ def submit(request):
                             user.task4 = 5
                             user.save()
                             response_data = {'success': True, 'message': "That's Correct!"}
-                            return response_data
+                            return JsonResponse(response_data)
                         else :
                             user.task4 += 1
                             user.save()
                             response_data = {'success': False, 'message': "Wrong Answer!"}
-                            return response_data
+                            return JsonResponse(response_data)
                     else : return HttpResponse("You have reached your submission limit")
                 elif task_id == "5":
                     if user.task5 <5 :
@@ -110,12 +110,12 @@ def submit(request):
                             user.task5 = 5
                             user.save()
                             response_data = {'success': True, 'message': "That's Correct!"}
-                            return response_data
+                            return JsonResponse(response_data)
                         else :
                             user.task5 += 1
                             user.save()
                             response_data = {'success': False, 'message': "Wrong Answer!"}
-                            return response_data
+                            return JsonResponse(response_data)
                     else : return HttpResponse("You have reached your submission limit")
                 elif task_id == "6":
                     if user.task6 <5 :
@@ -123,12 +123,12 @@ def submit(request):
                             user.task6 = 5
                             user.save()
                             response_data = {'success': True, 'message': "That's Correct!"}
-                            return response_data
+                            return JsonResponse(response_data)
                         else :
                             user.task6 += 1
                             user.save()
                             response_data = {'success': False, 'message': "Wrong Answer!"}
-                            return response_data
+                            return JsonResponse(response_data)
                     else : return HttpResponse("You have reached your submission limit")
         else:
             return HttpResponse("Submission time over")
