@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Register</title>
+    </head>
+    <body>
+        <form action="" method="post">
+            <input type="text" name="email">
+            <input type="text" name="first_name">
+            <input type="text" name="last_name">
+            <input type="text" name="phone">
+            <input type="submit" value="Register">
+            {% csrf_token %}
+        </form>
+    </body>
+</html>

@@ -1,0 +1,323 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" /> <link rel="shortcut icon" href="https://i.ibb.co/nzm5CN5/signal-2023-05-02-215139-003.png" type="image/x-icon">
+
+
+  <title>C-cube</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css" /> -->
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" /> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <!-- <img src="images/logo.png" alt="" /> -->
+            <img src="{% static 'images/Logo.png' %}" alt="" />
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail-box">
+                    <h1>
+                      Welcome to<p></p>
+                      <span>
+                        The Inventory
+                      </span>
+                    </h1>
+                    <p>
+                      Scroll Down to complete the tasks
+                    </p>
+                    <div class="btn-box">
+                      
+        
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 img-container">
+                  <div class="img-box">
+                    <!-- <img src="images/C_cube_logo.png" alt=""> -->
+                    <img src="{% static 'images/C_cube_logo.png' %}" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="carousel-item ">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail-box">
+                    <h1>
+                      Sponsored by 
+                      <span>
+                        innspark
+                      </span>
+                    </h1>
+                    <p>
+                    </p>
+                    <div class="btn-box">
+                      
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 img-container">
+                  <div class="img-box">
+                    <img src="{% static 'images/innspark.png' %}" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item ">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail-box">
+                    <h1>
+                      In assosiation with 
+                      <span>
+                        Cisai
+                      </span>
+                    </h1>
+                    <p>
+                    
+                    </p>
+                    <div class="btn-box">
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 img-container">
+                  <div class="img-box">
+                    <img src="{% static 'images/cisailogo.png' %}" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+  
+  
+
+  <section class="contact_section layout_padding">
+    <div class="container ">
+      <div class="heading_container">
+        <h2>
+          Register To Play Now
+        </h2>
+      </div>
+
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form action="register/" method="post">
+            <div>
+              <input type="text" placeholder="First Name" name="first_name" />
+            </div>
+            <div>
+              <input type="text" placeholder="Last Name" name="last_name"/>
+            </div>
+            <div>
+              <input type="email" placeholder="Email" name="email"/>
+            </div>
+            <div>
+              <input type="text" placeholder="Phone" name="phone"/>
+            </div>
+            <div class="d-flex ">
+              <button> Play </button>
+            </div>
+            {% csrf_token %}
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- end contact section -->
+
+
+
+  <!-- info section -->
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="info_logo">
+        <h2>
+          C-cube
+        </h2>
+      </div>
+      <div class="row">
+
+        <div class="col-md-3">
+          <div class="info_contact">
+            <h5>
+            About
+            </h5>
+            <div>
+              <div class="img-box">
+                <img src="{% static 'images/location-white.png' %}" width="18px" alt="">
+              </div>
+              <p>
+                Amritapuri
+              </p>
+              
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="{% static 'images/envelope-white.png' %}" width="18px" alt="">
+              </div>
+              <p>
+                ccube@amrita.edu
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_info">
+            <h5>
+              Informations
+            </h5>
+            <p>
+              An initiative for tech enthusiasist for develeping and learning skills
+            </p>
+          </div>
+        </div>
+
+        
+        <div class="col-md-3">
+          <div class="info_form ">
+            
+            <div class="social_box">
+              <a href="">
+                <img src="{% static 'images/fb.png' %}" alt="">
+              </a>
+              <a href="">
+                <img src="{% static 'images/twitter.png' %}" alt="">
+              </a>
+              <a href="">
+                <img src="{% static 'images/linkedin.png' %}" alt="">
+              </a>
+              <a href="">
+                <img src="{% static 'images/youtube.png' %}" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section ">
+    <div class="container">
+      <p>
+        &copy; 2023 All Rights Reserved By C-cube
+      </p>
+    </div>
+  </section>
+  <!-- end  footer section -->
+</body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>  
+<!-- <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script> -->
+  <!-- <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"> -->
+  </script>
+  <!-- <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      navText: [],
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        420: {
+          items: 2
+        },
+        1000: {
+          items: 5
+        }
+      }
+
+    });
+  </script>
+  <script>
+    var nav = $("#navbarSupportedContent");
+    var btn = $(".custom_menu-btn");
+    btn.click
+    btn.click(function (e) {
+
+      e.preventDefault();
+      nav.toggleClass("lg_nav-toggle");
+      document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+    });
+  </script> -->
+  <!-- <script>
+    $('.carousel').on('slid.bs.carousel', function () {
+      $(".indicator-2 li").removeClass("active");
+      indicators = $(".carousel-indicators li.active").data("slide-to");
+      a = $(".indicator-2").find("[data-slide-to='" + indicators + "']").addClass("active");
+      console.log(indicators);
+
+    })
+  </script> -->
+</html>
