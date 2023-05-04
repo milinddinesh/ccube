@@ -1,7 +1,9 @@
 # ccube
 
 ## Set up
-* clone the repo  https://github.com/milinddinesh/ccube.git 
+* clone the repo  
+`git clone https://github.com/milinddinesh/ccube.git`
+ 
 * cd into directory `cd cisai`
 
 
