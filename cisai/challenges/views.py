@@ -52,60 +52,71 @@ def submit(request):
                 return HttpResponse("User not found")
             else :
                 if task_id == "1":
-                    if validate(task_id,flag):
-                        user.task1 = 5
-                        user.save()
-                        return HttpResponse("That's Correct!")
-                    else :
-                        user.task1 += 1
-                        user.save()
-                        return HttpResponse("Wrong Answer!")
+                    if user.task1 <5 :
+                        if validate(task_id,flag):
+                            user.task1 = 5
+                            user.save()
+                            return HttpResponse("That's Correct!")
+                        else :
+                            user.task1 += 1
+                            user.save()
+                            return HttpResponse("Wrong Answer!")
+                    else : return HttpResponse("You have reached your submission limit")
                 elif task_id == "2":
-                    if validate(task_id,flag):
-                        print("returned true")
-                        user.task2 = 5
-                        user.save()
-                        return HttpResponse("That's Correct!")
-                    else :
-                        user.task2 += 1
-                        user.save()
-                        return HttpResponse("Wrong Answer!")
+                    if user.task2 <5 :
+                        if validate(task_id,flag):
+                            user.task2 = 5
+                            user.save()
+                            return HttpResponse("That's Correct!")
+                        else :
+                            user.task2 += 1
+                            user.save()
+                            return HttpResponse("Wrong Answer!")
+                    else : return HttpResponse("You have reached your submission limit")
                 elif task_id == "3":
-                    if validate(task_id,flag):
-                        user.task3 = 5
-                        user.save()
-                        return HttpResponse("That's Correct!")
-                    else :
-                        user.task3 += 1
-                        user.save()
-                        return HttpResponse("Wrong Answer!")
+                    if user.task3 <5 :
+                        if validate(task_id,flag):
+                            user.task3 = 5
+                            user.save()
+                            return HttpResponse("That's Correct!")
+                        else :
+                            user.task3 += 1
+                            user.save()
+                            return HttpResponse("Wrong Answer!")
+                    else : return HttpResponse("You have reached your submission limit")
                 elif task_id == "4":
-                    if validate(task_id,flag):
-                        user.task4 = 5
-                        user.save()
-                        return HttpResponse("That's Correct!")
-                    else :
-                        user.task4 += 1
-                        user.save()
-                        return HttpResponse("Wrong Answer!")
+                    if user.task4 <5 :
+                        if validate(task_id,flag):
+                            user.task4 = 5
+                            user.save()
+                            return HttpResponse("That's Correct!")
+                        else :
+                            user.task4 += 1
+                            user.save()
+                            return HttpResponse("Wrong Answer!")
+                    else : return HttpResponse("You have reached your submission limit")
                 elif task_id == "5":
-                    if validate(task_id,flag):
-                        user.task5 = 5
-                        user.save()
-                        return HttpResponse("That's Correct!")
-                    else :
-                        user.task5 += 1
-                        user.save()
-                        return HttpResponse("Wrong Answer!")
+                    if user.task5 <5 :
+                        if validate(task_id,flag):
+                            user.task5 = 5
+                            user.save()
+                            return HttpResponse("That's Correct!")
+                        else :
+                            user.task5 += 1
+                            user.save()
+                            return HttpResponse("Wrong Answer!")
+                    else : return HttpResponse("You have reached your submission limit")
                 elif task_id == "6":
-                    if validate(task_id,flag):
-                        user.task6 = 5
-                        user.save()
-                        return HttpResponse("That's Correct!")
-                    else :
-                        user.task6 += 1
-                        user.save()
-                        return HttpResponse("Wrong Answer!")
+                    if user.task6 <5 :
+                        if validate(task_id,flag):
+                            user.task6 = 5
+                            user.save()
+                            return HttpResponse("That's Correct!")
+                        else :
+                            user.task6 += 1
+                            user.save()
+                            return HttpResponse("Wrong Answer!")
+                    else : return HttpResponse("You have reached your submission limit")
         else:
             return HttpResponse("Submission time over")
     else:
@@ -130,6 +141,3 @@ def getSubmissions(request):
                 return JsonResponse(task_submissions)
         else : return HttpResponse("Your session is over")
     else : return HttpResponse("Invalid request method")
-
-def play(request):
-    return redirect("https://vighneshhm.github.io/Crashing-Into-You-CTF/")
