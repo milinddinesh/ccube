@@ -28,24 +28,28 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                
                 <div class="modal-body">
 oh god
-                    <!-- <form action="/challenges/play/" method="get"> -->
                     <div>
                         <a href="https://vighneshhm.github.io/Crashing-Into-You-CTF/" target="_blank"><input type="button" class="btn-primary" value="Play"></a>
                     </div>
+                    <form action="/challenges/submit/" method="post">
                     <div class="input-group mb-3 space">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">Enter the Flag</span>
                         </div>
                         <input type="text" class="form-control modal-flag" placeholder="flag{t3st_f1ag}"
-                            aria-label="flag" aria-describedby="basic-addon1">
+                            aria-label="flag" aria-describedby="basic-addon1" name = "flag">
+                        <input type="hidden" name="task" value="6">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
+                {% csrf_token %}
+                </form>
             </div>
         </div>
     </div>
@@ -137,6 +141,7 @@ random bullshit go <form action="/challenges/submit/" method="post">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <form action="/challenges/submit/" method="post">
                 <div class="modal-body">
 really bro ? 
                     <div class="input-group mb-3 space">
@@ -145,12 +150,15 @@ really bro ?
                         </div>
                         <input type="text" class="form-control modal-flag" placeholder="flag{t3st_f1ag}"
                             aria-label="flag" aria-describedby="basic-addon1">
+                        <input type="hidden" value="3" name="task">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
+                {% csrf_token %}
+                </form>
             </div>
         </div>
     </div>
@@ -163,6 +171,7 @@ really bro ?
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <form action="/challenges/submit/" method="post">
                 <div class="modal-body">
  just kill me already 
                     <div class="input-group mb-3 space">
@@ -171,12 +180,15 @@ really bro ?
                         </div>
                         <input type="text" class="form-control modal-flag" placeholder="flag{t3st_f1ag}"
                             aria-label="flag" aria-describedby="basic-addon1">
+                        <input type="hidden" name="flag" value="4">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
+                {% csrf_token %}
+                </form>
             </div>
         </div>
     </div>
@@ -189,6 +201,7 @@ really bro ?
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <form action="/challenges/submit" method="post">
                 <div class="modal-body">
 when will my misery end ? 
                     <div class="input-group mb-3 space">
@@ -197,12 +210,15 @@ when will my misery end ?
                         </div>
                         <input type="text" class="form-control modal-flag" placeholder="flag{t3st_f1ag}"
                             aria-label="flag" aria-describedby="basic-addon1">
+                        <input type="hidden" name="flag" value="5">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
+                {% csrf_token %}
+                </form>
             </div>
         </div>
     </div>

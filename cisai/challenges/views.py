@@ -33,7 +33,12 @@ def validate(task_id,flag):
         if flag == "correct_flag":
             boo = True
         else : boo = False
+    elif task_id == "6":
+        if flag == "correct_flag":
+            boo = True
+        else : boo = False
     return boo
+    
 
 def submit(request):
     if request.method =="POST":
@@ -90,6 +95,15 @@ def submit(request):
                         return HttpResponse("That's Correct!")
                     else :
                         user.task5 += 1
+                        user.save()
+                        return HttpResponse("Wrong Answer!")
+                elif task_id == "6":
+                    if validate(task_id,flag):
+                        user.task6 = 5
+                        user.save()
+                        return HttpResponse("That's Correct!")
+                    else :
+                        user.task6 += 1
                         user.save()
                         return HttpResponse("Wrong Answer!")
         else:

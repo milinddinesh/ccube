@@ -11,6 +11,8 @@ class User_info(models.Model):
     task2 = models.IntegerField(default=0)
     task3 = models.IntegerField(default=0)
     task4 = models.IntegerField(default=0)
+    task5 = models.IntegerField(default=0)
+    task6 = models.IntegerField(default=0)
     completed = models.BooleanField(default=False)
 
 
