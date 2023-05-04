@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/milind/Documents/code/python/cisai/env"
+VIRTUAL_ENV="/home/milind/Documents/code/python/cisai/ccube/env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
