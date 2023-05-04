@@ -16,6 +16,10 @@
 * install requirements
 `pip3 install -r requirements.txt`
 
+* set up database
+`python3 manage.py makemigrations`
+`python3 manage.py migrate`
+
 * start the django server 
 `python3 manage.py runserver`
 
