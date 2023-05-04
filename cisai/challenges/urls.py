@@ -10,4 +10,5 @@ urlpatterns = [
     path('getSubmissions/',views.getSubmissions,name="getSubmissions"),
     # path('challenges/',views.challenges,name='challenges')
     path('download/',views.download,name="download"),
+    path('zipDownload/',views.zipDownload,name="zipDownload"),
 ]

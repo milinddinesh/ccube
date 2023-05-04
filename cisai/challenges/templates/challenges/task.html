@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="shortcut icon" href="https://i.ibb.co/nzm5CN5/signal-2023-05-02-215139-003.png" type="image/x-icon">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
 
 <body>
@@ -84,7 +84,6 @@ there's so many r
                 </div>
                 {% comment %} <form action="/challenges/submit/" method="post"> {% endcomment %}
                 <div class="modal-body">
-                    <a href="{% url 'download' %}">Download File</a>
 dont' know which is which 
                     <div class="input-group mb-3 space">
                         <div class="input-group-prepend">
@@ -113,6 +112,7 @@ dont' know which is which
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <a href="{% url 'zipDownload' %}">Download File</a>
 random bullshit go 
 {% comment %} <form action="/challenges/submit/" method="post"> {% endcomment %}
                     <div class="input-group mb-3 space">
@@ -145,6 +145,8 @@ random bullshit go
                 </div>
                 {% comment %} <form action="/challenges/submit/" method="post"> {% endcomment %}
                 <div class="modal-body">
+                    <a href="{% url 'download' %}">Download File</a>
+random bullshit go 
 really bro ? 
                     <div class="input-group mb-3 space">
                         <div class="input-group-prepend">
@@ -486,7 +488,12 @@ when will my misery end ?
                       },
                     success:function(response){
                         console.log("Hello");
-                    }
+                        if (response.success) {
+                            toastr.success(response.message);
+                        }
+                        else {
+                            toastr.error(response.message);
+                        }}
                 })
             })
             submitChallenge3.on("click",function(){
@@ -543,6 +550,7 @@ when will my misery end ?
             })
         });
     </script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </body>
 
 </html>

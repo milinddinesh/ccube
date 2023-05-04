@@ -76,7 +76,7 @@ def submit(request):
                             user.task2 += 1
                             user.save()
                             response_data = {'success': False, 'message': "Wrong Answer!"}
-                            return response_data
+                            return JsonResponse(response_data)
                     else : return HttpResponse("You have reached your submission limit")
                 elif task_id == "3":
                     if user.task3 <5 :
@@ -156,11 +156,19 @@ def getSubmissions(request):
     else : return HttpResponse("Invalid request method")
 
 def download(request):
-    print("inside")
-    file_path = os.path.join(settings.MEDIA_ROOT, 'files', 'file.txt')
+    file_path = os.path.join(settings.MEDIA_ROOT, 'files', 'images.jpeg')
     if os.path.exists(file_path):
         with open(file_path, 'rb') as fh:
-            response = HttpResponse(fh.read(), content_type='application/pdf')
-            response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
+            response = HttpResponse(fh.read(), content_type='image/jpeg')
+            response['Content-Disposition'] = 'attachment; filename=' + os.path.basename(file_path)
+            return response
+    else : raise Http404
+
+def zipDownload(request):
+    file_path = os.path.join(settings.MEDIA_ROOT, 'files', 'files.zip')
+    if os.path.exists(file_path):
+        with open(file_path, 'rb') as fh:
+            response = HttpResponse(fh.read(), content_type='application/zip')
+            response['Content-Disposition'] = 'attachment; filename=' + os.path.basename(file_path)
             return response
     else : raise Http404
