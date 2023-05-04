@@ -1,0 +1,4 @@
+sample text file
+
+1 - decode text 
+2 - zipped file - > 

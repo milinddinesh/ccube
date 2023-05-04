@@ -133,3 +133,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
