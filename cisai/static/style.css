@@ -943,3 +943,8 @@ label {
 .fa{
     color: rgb(0, 255, 0);
 }
+
+#buttonParent > #finalSubmit {
+    display: block;
+    margin: 0 auto;
+  }

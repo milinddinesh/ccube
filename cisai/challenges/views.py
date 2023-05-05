@@ -183,3 +183,20 @@ def zipDownload(request):
             response['Content-Disposition'] = 'attachment; filename=' + os.path.basename(file_path)
             return response
     else : raise Http404
+
+def finalSubmission(request):
+    if request.method == "POST":
+        user_email = request.COOKIES.get("user_email")
+        if user_email :
+            try:
+                user = User_info.objects.get(email=user_email)
+            except User_info.DoesNotExist :
+                return HttpResponse("User not found")
+            else :
+                user.completed = True
+                user.save()
+                response_data = {'success': True, 'message': "Congratulations for completing!"}
+                return JsonResponse(response_data)
+        else:
+            response_data = {'success': False, 'message': "Out of time"}
+            return JsonResponse(response_data)

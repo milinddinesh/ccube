@@ -244,7 +244,7 @@ when will my misery end ?
 
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                        <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8" id="buttonParent">
                             <div class="page-title home text-center typewriter">
                                 <span class="heading-page">Lets Start Our Game</span>
                             </div>
@@ -436,6 +436,7 @@ when will my misery end ?
                                     </a>
                                 </div>
                             </div>
+                            <button type="submit" id="finalSubmit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -456,6 +457,7 @@ when will my misery end ?
         const submitChallenge4=$("#submitChallenge4");
         const submitChallenge5=$("#submitChallenge5");
         const submitChallenge6=$("#submitChallenge6");
+        const finalSubmit=$("#finalSubmit");
         const inputChallenge1=$("#inputChallenge1");
         const inputChallenge2=$("#inputChallenge2");
         const inputChallenge3=$("#inputChallenge3");
@@ -546,6 +548,24 @@ when will my misery end ?
                     success:function(response){
                         console.log("Hello");
                     }
+                })
+            })
+            finalSubmit.on("click",function(){
+                $.ajax({
+                    url:"/challenges/finalSubmission",
+                    type:"POST",
+                    data:{task:"True",},
+                    beforeSend: function(xhr, settings) {
+                        xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                      },
+                    success:function(response){
+                        console.log("Hello");
+                        if (response.success) {
+                            toastr.success(response.message);
+                        }
+                        else {
+                            toastr.error(response.message);
+                        }}
                 })
             })
         });
